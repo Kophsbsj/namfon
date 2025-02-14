@@ -1,0 +1,101 @@
+/* Background Gradient */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* 3D Effect Container */
+.container {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    transform: perspective(1000px) rotateX(5deg);
+    transition: 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+.container:hover {
+    transform: perspective(1000px) rotateX(0deg);
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Glowing Text */
+.glow-text {
+    color: #ff4b5c;
+    text-shadow: 0px 0px 10px rgba(255, 75, 92, 0.8), 0px 0px 20px rgba(255, 75, 92, 0.5);
+}
+
+/* Floating Hearts Animation */
+.hearts {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-800px); opacity: 0; }
+}
+
+.hearts::before,
+.hearts::after {
+    content: "💖";
+    font-size: 30px;
+    position: absolute;
+    animation: float 6s infinite ease-in-out;
+}
+
+.hearts::before {
+    left: 20%;
+    animation-duration: 5s;
+}
+
+.hearts::after {
+    right: 20%;
+    animation-duration: 7s;
+}
+
+/* Image */
+.image-container img {
+    width: 320px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.image-container img:hover {
+    transform: scale(1.1) rotate(2deg);
+}
+
+/* Text */
+p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #d63384;
+    transition: 0.5s ease-in-out;
+}
+
+/* Button */
+button {
+    background: linear-gradient(135deg, #ff4b5c, #d63384);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #d63384, #ff4b5c);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
