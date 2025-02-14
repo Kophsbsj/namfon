@@ -6,7 +6,7 @@ const quotes = [
 	"ຮັກມາກກກກກກກ ❤️"
 ];
 
-const images = ["img1.jpg", "img1.jpg","img1.jpg","img1.jpg","img1.jpg"];
+const images = ["IMG_20250214_195431.jpg", "IMG_20250214_195431.jpg","IMG_20250214_195431.jpg","IMG_20250214_195431.jpg","IMG_20250214_195431.jpg"];
 
 let index = 0;
 
